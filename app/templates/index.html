@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Network Intrusion Detection System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Network Intrusion Detection System</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <label for="model">Select Model(s):</label>
+        <select id="model" name="model" multiple size="7">
+            <option value="gaussian_naive_bayes">Gaussian Naive Bayes</option>
+            <option value="decision_tree">Decision Tree</option>
+            <option value="random_forest">Random Forest</option>
+            <option value="logistic_regression">Logistic Regression</option>
+            <option value="svm">SVM</option>
+            <option value="gradboost">Gradient Boosting</option>
+        </select>
+        <label>Upload CSV:</label>
+        <input type="file" name="file" />
+        <h2>Or enter details manually:</h2>
+        <!-- Add fields here for manual data entry -->
+        <!-- Example: -->
+        <label>Duration:</label>
+        <input type="text" name="duration" />
+
+        <label>Protocol Type:</label>
+        <input type="text" name="protocol_type" />
+
+        <label>Service:</label>
+        <input type="text" name="service" />
+
+        <label>Flag:</label>
+        <input type="text" name="flag" />
+
+        <label>Src Bytes:</label>
+        <input type="text" name="src_bytes" />
+
+        <label>Dst Bytes:</label>
+        <input type="text" name="dst_bytes" />
+
+        <label>Land:</label>
+        <input type="text" name="land" />
+
+        <label>Wrong Fragment:</label>
+        <input type="text" name="wrong_fragment" />
+
+        <label>Urgent:</label>
+        <input type="text" name="urgent" />
+
+        <label>Hot:</label>
+        <input type="text" name="hot" />
+
+        <label>Num Failed Logins:</label>
+        <input type="text" name="num_failed_logins" />
+
+        <label>Logged In:</label>
+        <input type="text" name="logged_in" />
+
+        <label>Num Compromised:</label>
+        <input type="text" name="num_compromised" />
+
+        <label>Root Shell:</label>
+        <input type="text" name="root_shell" />
+
+        <label>SU Attempted:</label>
+        <input type="text" name="su_attempted" />
+
+        <label>Num Root:</label>
+        <input type="text" name="num_root" />
+
+        <label>Num File Creations:</label>
+        <input type="text" name="num_file_creations" />
+
+        <label>Num Shells:</label>
+        <input type="text" name="num_shells" />
+
+        <label>Num Access Files:</label>
+        <input type="text" name="num_access_files" />
+
+        <label>Num Outbound Cmds:</label>
+        <input type="text" name="num_outbound_cmds" />
+
+        <label>Is Host Login:</label>
+        <input type="text" name="is_host_login" />
+
+        <label>Is Guest Login:</label>
+        <input type="text" name="is_guest_login" />
+
+        <label>Count:</label>
+        <input type="text" name="count" />
+
+        <label>Srv Count:</label>
+        <input type="text" name="srv_count" />
+
+        <label>Serror Rate:</label>
+        <input type="text" name="serror_rate" />
+
+        <label>Srv Serror Rate:</label>
+        <input type="text" name="srv_serror_rate" />
+
+        <label>Rerror Rate:</label>
+        <input type="text" name="rerror_rate" />
+
+        <label>Srv Rerror Rate:</label>
+        <input type="text" name="srv_rerror_rate" />
+
+        <label>Same Srv Rate:</label>
+        <input type="text" name="same_srv_rate" />
+
+        <label>Diff Srv Rate:</label>
+        <input type="text" name="diff_srv_rate" />
+
+        <label>Srv Diff Host Rate:</label>
+        <input type="text" name="srv_diff_host_rate" />
+
+        <label>Dst Host Count:</label>
+        <input type="text" name="dst_host_count" />
+
+        <label>Dst Host Srv Count:</label>
+        <input type="text" name="dst_host_srv_count" />
+
+        <label>Dst Host Same Srv Rate:</label>
+        <input type="text" name="dst_host_same_srv_rate" />
+
+        <label>Dst Host Diff Srv Rate:</label>
+        <input type="text" name="dst_host_diff_srv_rate" />
+
+        <label>Dst Host Same Src Port Rate:</label>
+        <input type="text" name="dst_host_same_src_port_rate" />
+
+        <label>Dst Host Srv Diff Host Rate:</label>
+        <input type="text" name="dst_host_srv_diff_host_rate" />
+
+        <label>Dst Host Serror Rate:</label>
+        <input type="text" name="dst_host_serror_rate" />
+
+        <label>Dst Host Srv Serror Rate:</label>
+        <input type="text" name="dst_host_srv_serror_rate" />
+
+        <label>Dst Host Rerror Rate:</label>
+        <input type="text" name="dst_host_rerror_rate" />
+
+        <label>Dst Host Srv Rerror Rate:</label>
+        <input type="text" name="dst_host_srv_rerror_rate" />
+        
+        <input type="submit" value="Predict" />
+    </form>
+</body>
+</html>

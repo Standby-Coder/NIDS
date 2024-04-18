@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Prediction Results</h1>
+    <div class="results-container">
+        {% for model, prediction in results.items() %}
+        <div class="result">
+            <h2>{{ model.replace('_', ' ').title() }}</h2>
+            <p>Prediction: <strong>{{ prediction }}</strong></p>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="back-link">
+        <a href="/">Go Back</a>
+    </div>
+</body>
+</html>
